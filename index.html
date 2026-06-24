@@ -368,7 +368,7 @@ function apiRequest(action,payload){
 }
 
 function openPayPal(){ window.open(CONFIG.paypalUrl || 'https://paypal.me/kela1984/25USD','_blank','noopener'); }
-function openWhatsApp(){ const msg=encodeURIComponent('Hola, deseo inscribirme en el curso Diseño Instruccional 5.0 con Inteligencia Artificial. Valor: USD 50. Quiero información para pago o envío de comprobante.'); window.open('https://wa.me/'+(CONFIG.whatsapp||'593997903950')+'?text='+msg,'_blank','noopener'); }
+function openWhatsApp(){ const msg=encodeURIComponent('Hola, deseo inscribirme en el curso Diseño Instruccional 5.0 con Inteligencia Artificial. Valor: USD 25. Quiero información para pago o envío de comprobante.'); window.open('https://wa.me/'+(CONFIG.whatsapp||'593997903950')+'?text='+msg,'_blank','noopener'); }
 function openPaymentModal(){ document.getElementById('paymentModal')?.classList.add('active'); if(state.user){ const n=document.getElementById('payName'), e=document.getElementById('payEmail'); if(n&&!n.value)n.value=state.user.name||''; if(e&&!e.value)e.value=state.user.email||''; } }
 function closePaymentModal(){ document.getElementById('paymentModal')?.classList.remove('active'); }
 function copyText(text){ navigator.clipboard?.writeText(text).then(()=>toast('Datos copiados al portapapeles.')).catch(()=>toast(text)); }
